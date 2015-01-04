@@ -3,7 +3,7 @@ nab-derpbook
 
 help me - Social Network FB clone
 
-I want to enhance functionality as I learnt new concepts.
+I want to enhance functionality as I learn new concepts.
 
 @TODO:
 
