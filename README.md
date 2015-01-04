@@ -1,7 +1,7 @@
 nab-derpbook
 ============
 
-help me - Social Network FB clone
+Social Network FB clone
 
 I want to enhance functionality as I learn new concepts.
 
