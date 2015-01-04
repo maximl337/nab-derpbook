@@ -6,22 +6,35 @@
 
 //display landing page if no cookie or session found
 
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Derpbook</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+
+function get_header($file_path) {
+
+	if(!is_readable($file_path)) 
+		throw new Exception("File is not readable");
+				
+	include_once($file_path);
+}
+
+	try {
+		get_header('./app/views/_template/header.php');
+	} catch (Exception $e) {
+		die($e->__toString());
+	}
+
+?>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<h2> Welcome to Derpbook</h2>
+				<h2 class="text-center"> Welcome to Derpbook</h2>
+			</div>
+			
+			<hr />
+
+			<div class="col-md-12 text-center">
+				<a href="register.php" class="btn btn-primary">Register</a> 
+				OR 
+				<a href="login.php" class="btn btn-primary">Login</a>
 			</div>
 		</div>
 	</div>
