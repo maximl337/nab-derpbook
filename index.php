@@ -13,6 +13,14 @@ try {
 	die($e->__toString());
 }
 
+/*$dbh = get_db();
+
+$sql = "SELECT * FROM `members` WHERE `username` LIKE :username";
+$query = $dbh->prepare($sql);
+$query->execute( array(':username' => '%'.$first_name.'-'.$last_name ));
+		
+$members = $query->fetchAll(); */
+
 ?>
 	<div class="container-fluid">
 		<div class="row">
