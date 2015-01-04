@@ -5,22 +5,13 @@
 //check if user has a cookie set
 
 //display landing page if no cookie or session found
+require_once('./app/controllers/_functions.php');
 
-
-
-function get_header($file_path) {
-
-	if(!is_readable($file_path)) 
-		throw new Exception("File is not readable");
-				
-	include_once($file_path);
+try {
+	get_header();
+} catch (Exception $e) {
+	die($e->__toString());
 }
-
-	try {
-		get_header('./app/views/_template/header.php');
-	} catch (Exception $e) {
-		die($e->__toString());
-	}
 
 ?>
 	<div class="container-fluid">
